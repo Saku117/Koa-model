@@ -50,7 +50,7 @@ const utils = {
             break;
           }
         case 'reg':
-          let reg = itme['reg'];
+          let reg = item['reg'];
           if (!reg || !reg.test(value)) {
             res = false;
             break
@@ -64,7 +64,8 @@ const utils = {
       }
     }
     return res;
-  }
+  },
+  
 }
 
 

@@ -36,10 +36,7 @@ router.post('/user/login', async (ctx) => {
             let val = res[0];
             let uid = val.uid;
             ctx.state.uid = uid;
-            let token = generateToken({
-                name: val.name,
-                uid: val.uid
-            });
+            let token = generateToken({ uid })
             ctx.body = {
                 token,
                 status: 200,

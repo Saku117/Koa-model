@@ -5,8 +5,13 @@ const user = {
     queryUserSql: 'select * from  t_user where name=? and password=?',
     updatePwdSql: `update t_user set password=? where uid=?`,
 }
+const note = {
+    addNoteSql: `INSERT INTO t_note(name,uid,create_time) VALUES(?,?,?)`,
+    modifyNoteSql: `update t_note set name=? where id=? AND uid=?`,
+}
 
 
 module.exports = {
-    user
+    user,
+    note,
 }
